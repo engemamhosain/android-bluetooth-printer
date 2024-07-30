@@ -1,1 +1,1 @@
-# android-bluetooth-printer
+# android-bluetooth-printer lib
