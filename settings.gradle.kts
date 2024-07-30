@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Blt Printer"
 include(":app")
- 
+include(":printerlibrary")
