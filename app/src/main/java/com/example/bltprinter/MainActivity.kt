@@ -32,7 +32,36 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         bltPrinterHelper = BltPrinterHelper(this, this)
         bltPrinterHelper.requestBluetoothPermission()
-        bltPrinterHelper.BluetoothSwitchOn()
+        bltPrinterHelper.switchOnBluetooth()
+
+
+         val message = "****************************************\n" +
+                "       Sample Fancy Bill Receipt\n" +
+                "****************************************\n" +
+                "Date: 2023-10-26 15:30:00\n" +
+                "Customer: John Doe\n" +
+                "Email: johndoe@example.com\n" +
+                "\n" +
+                "---------------------------\n" +
+                "Item          |  Qty  |  Price  \n" +
+                "------------------------------\n" +
+                 "হলুদের গুড়া  |   3   | ১০ টাকা \n" +
+                "মসলা       |   3   | ১০ টাকা \n" +
+                 "মরিচের গুড়া  |  2   | ১০ টাকা \n" +
+                "----------------------------------------\n" +
+                "Subtotal      |       |  \$30.00 \n" +
+                "Tax (7%)      |       |   \$2.10 \n" +
+                "Total         |       |  \$32.10 \n" +
+                "\n" +
+                "----------------------------------------\n" +
+                "Payment Method: Credit Card\n" +
+                "Transaction ID: 1234567890\n" +
+                "\n" +
+                "Thank you for your purchase!\n" +
+                "Please come again soon!\n" +
+                "\n" +
+                "****************************************\n"
+        bltPrinterHelper.printData(message);
     }
 }
 
